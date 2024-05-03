@@ -1,1 +1,33 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<h1 align="center">Going places? Py-Travel has got you covered!</h1>
+<div class="three_block">
+  <div class="block">
+    <a href="/travel">
+      <img
+        src="{{url_for('static', filename='../static/images/travel.webp')}}"
+        alt="Travel"
+      />
+      <h2>Travel</h2>
+    </a>
+  </div>
+  <div class="block">
+    <a href="/relax">
+      <img
+        src="{{url_for('static', filename='../static/images/relax.webp')}}"
+        alt="Relax"
+      />
+      <h2>Relax</h2>
+    </a>
+  </div>
+  <div class="block">
+    <a href="/eat">
+      <img
+        src="{{url_for('static', filename='../static/images/travel.webp')}}"
+        alt="Eat"
+      />
+      <h2>Eat</h2>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

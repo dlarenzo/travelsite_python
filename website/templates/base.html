@@ -20,27 +20,46 @@
   <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="navbar"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="container-fluid">
+        <!-- Navbar Brand -->
+        <a href="#" class="navbar-brand">Py-Travel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbar">
-        <div class="navbar-nav">
-          <a href="/" class="nav-item nav-link" id="home">Home</a>
-          <a href="/login" class="nav-item nav-link" id="login">Login</a>
-          <a href="/sign-up" class="nav-item nav-link" id="sign-up">Sign Up</a>
-          <a href="/travel" class="nav-item nav-link" id="travel">Travel</a>
-          <a href="/eat" class="nav-item nav-link" id="eat">Eat</a>
-          <a href="/relax" class="nav-item nav-link" id="relax">Relax</a>
-          <a href="/logout" class="nav-item nav-link" id="logout">Logout</a>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a href="/" class="nav-item nav-link" id="home">Home</a>
+            <a href="/login" class="nav-item nav-link" id="login">Login</a>
+            <a href="/sign-up" class="nav-item nav-link" id="sign-up"
+              >Sign Up</a
+            >
+            <a href="/travel" class="nav-item nav-link" id="travel">Travel</a>
+            <a href="/eat" class="nav-item nav-link" id="eat">Eat</a>
+            <a href="/relax" class="nav-item nav-link" id="relax">Relax</a>
+            <a href="/logout" class="nav-item nav-link" id="logout">Logout</a>
+          </div>
         </div>
       </div>
     </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <img
+        src="{{url_for('static', filename='../static/images/hero_bg.webp')}}"
+        alt=""
+        class="img-fluid"
+      />
+      <div class="hero-inner">
+        <h1>Py-Travel</h1>
+        <p>Travel, Eat, Relax</p>
+      </div>
+    </section>
     <!-- CONTENT -->
     <div class="container">{% block content %} {% endblock %}</div>
 
