@@ -5,24 +5,24 @@ auth = Blueprint('auth', __name__)
 #define route and function for each of the login/ registration routes
 @auth.route('/login')
 def login():
-    return "<p>Login</p>"
+    return render_template("login.html", text="Testing")
 
 @auth.route('/logout')
 def logout():
-    return "<p>Logout</p>"
+    return render_template("logout.html")
   
 @auth.route('/sign-up')
 def sign_up():
-    return "<p>Sign-up</p>"
+    return render_template("sign_up.html")
   
 @auth.route('/travel')
 def travel():
-    return "<p>Travel</p>"
+    return render_template("travel.html")
   
 @auth.route('/eat')
 def eat():
-    return "<p>Eat</p>"
+    return render_template("eat.html")
   
 @auth.route('/relax')
 def relax():
-    return "<p>Relax</p>"
+    return render_template("relax.html")
