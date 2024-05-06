@@ -9,3 +9,4 @@
 main
 navbar
 login
+home

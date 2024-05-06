@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 <h1 align="center">Going places? Py-Travel has got you covered!</h1>
-<div class="three_block">
-  <div class="block">
+<div class="three_block row text-center">
+  <div class="block col">
     <a href="/travel">
       <img
         src="{{url_for('static', filename='../static/images/travel.webp')}}"
@@ -10,7 +10,7 @@
       <h2>Travel</h2>
     </a>
   </div>
-  <div class="block">
+  <div class="block col">
     <a href="/relax">
       <img
         src="{{url_for('static', filename='../static/images/relax.webp')}}"
@@ -19,7 +19,7 @@
       <h2>Relax</h2>
     </a>
   </div>
-  <div class="block">
+  <div class="block col">
     <a href="/eat">
       <img
         src="{{url_for('static', filename='../static/images/travel.webp')}}"

@@ -19,15 +19,18 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+      style="position: fixed; width: 100%; z-index: 1000; top: 0; left: 0"
+    >
       <div class="container-fluid">
         <!-- Navbar Brand -->
         <a href="#" class="navbar-brand">Py-Travel</a>
         <button
           class="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="navbar"
+          data-bs-toggle="collapse"
+          data-bs-target="navbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,13 +52,14 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" style="position: relative">
       <img
         src="{{url_for('static', filename='../static/images/hero_bg.webp')}}"
         alt=""
-        class="img-fluid"
+        class="object-fit-cover img-fluid"
+        style="width: 100%; object-fit: cover; object-position: center"
       />
-      <div class="hero-inner">
+      <div class="hero-inner" style="position: absolute; top: 40%; left: 45%">
         <h1>Py-Travel</h1>
         <p>Travel, Eat, Relax</p>
       </div>
