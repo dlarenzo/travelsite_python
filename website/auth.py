@@ -156,3 +156,15 @@ def sign_up():
       # Redirect the user to the home page
       return redirect(url_for('views.home'))
   return render_template('sign_up.html', user=current_user)
+
+@auth.route('/travel')
+def travel():
+  return render_template("travel.html")
+  
+@auth.route('/eat')
+def eat():
+  return render_template("eat.html")
+  
+@auth.route('/relax')
+def relax():
+  return render_template("relax.html")

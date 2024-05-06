@@ -1,5 +1,7 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% if
+current_user.is_authenticated %}
 <h1 align="center">Going places? Py-Travel has got you covered!</h1>
+
 <div class="three_block row text-center">
   <div class="block col">
     <a href="/travel">
@@ -29,5 +31,6 @@
     </a>
   </div>
 </div>
-
-{% endblock %}
+{% else %}
+<h1 align="center">Login and let the fun begin!</h1>
+{% endif %} {% endblock %}
