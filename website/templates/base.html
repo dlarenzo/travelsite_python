@@ -37,15 +37,18 @@
 
         <div class="collapse navbar-collapse" id="navbar">
           <div class="navbar-nav">
+            {% if user.is_authenticated %}
             <a href="/" class="nav-item nav-link" id="home">Home</a>
-            <a href="/login" class="nav-item nav-link" id="login">Login</a>
-            <a href="/sign-up" class="nav-item nav-link" id="sign-up"
-              >Sign Up</a
-            >
             <a href="/travel" class="nav-item nav-link" id="travel">Travel</a>
             <a href="/eat" class="nav-item nav-link" id="eat">Eat</a>
             <a href="/relax" class="nav-item nav-link" id="relax">Relax</a>
             <a href="/logout" class="nav-item nav-link" id="logout">Logout</a>
+            {% else %}
+            <a href="/login" class="nav-item nav-link" id="login">Login</a>
+            <a href="/sign-up" class="nav-item nav-link" id="sign-up"
+              >Sign Up</a
+            >
+            {% endif %}
           </div>
         </div>
       </div>
@@ -64,6 +67,28 @@
         <p>Travel, Eat, Relax</p>
       </div>
     </section>
+
+    <!-- ALERT MESSAGES -->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <!-- Error Alert Message -->
+    <div class="alert alert-danger alert-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <!-- Success Alert Message -->
+    <div class="alert alert-success alert-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
     <!-- CONTENT -->
     <div class="container">{% block content %} {% endblock %}</div>
 
